@@ -4,19 +4,24 @@ Ouvrir le fichier « redis.windows.conf » avec un éditeur de texte.
 
 Modifier la ligne « # rename-command » dans la section « Security » (~ligne 454) en retirant le # et comme procédant comme ça :
 
-_ **rename-command COMMAND COMMAND\_RENAMED** _
+**rename-command COMMAND COMMAND\_RENAMED**
 
 Il est possible de rajouter autant de ligne que l&#39;on souhaite pour chaque commande.
 
-_NOTE :_
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-_Il est préférable de générer une commande renomée aléatoire encodé en base64, pour cela, on peut utiliser la commande suivante dans un bash linux (gitbash fonctionne) :_
+NOTE :
 
-_openssl rand 60 | openssl base64 -A_
+Il est préférable de générer une commande renomée aléatoire encodé en base64, pour cela, on peut utiliser la commande suivante dans un bash linux (gitbash fonctionne) :
 
-_Le résultat obtenu ressemble à celui-ci :_
+openssl rand 60 | openssl base64 -A
 
-_/ho9BZUZMobjGX1FsnNzFJrNkJ2fuD3Af+GoSj0cSDQeapcAi7GVPa0106kSF1VhgL0FmoWG3qy8zk6u_
+Le résultat obtenu ressemble à celui-ci :
+
+/ho9BZUZMobjGX1FsnNzFJrNkJ2fuD3Af+GoSj0cSDQeapcAi7GVPa0106kSF1VhgL0FmoWG3qy8zk6u
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Redémarrer Redis en précisant notre fichier conf :
 

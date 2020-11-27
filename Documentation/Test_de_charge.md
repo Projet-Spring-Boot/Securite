@@ -16,6 +16,6 @@ Voici un exemple de commande pertinente pour notre application :
 
 - ./redis-benchmark.exe -a -c 10000 -n -d 350
 
--c 10000 -\&gt; nombre de connexion en simultané sur le server Redis
+-c 10000 -> nombre de connexion en simultané sur le server Redis
 
--d 350 -\&gt; taille en octet d&#39;un tweet avec le pseudo et l&#39;entête de twitter
+-d 350 -> taille en octet d&#39;un tweet avec le pseudo et l&#39;entête de twitter

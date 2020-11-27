@@ -5,7 +5,7 @@ Pour effectuer des tests de charge sur une base de données Redis nous avons uti
 Utilisation de l&#39;outil dans un environnement Windows:
 
 - Ouvrir un cmd ou un git bash (les commandes ci-dessous ont était réalisées sur un git bash)
-- Déplacez-vous dans le répertoire d&#39;installation de Redis avec la commande : cd \&lt;chemin-du-repertoire\&gt; (cd /d/redis)
+- Déplacez-vous dans le répertoire d&#39;installation de Redis avec la commande : cd <chemin-du-repertoire\> (cd /d/redis)
 
 - Ensuite pour effectuer un test de charge avec une configuration par défaut exécutez la commande : ./redis-benchmark.exe
 - A cette commande peut être rajouter des arguments pour modifier la configuration du test de charge, voici la liste des arguments :

@@ -29,7 +29,7 @@ Avec git bash :
 
 - Ouvrir un git bash
 - Se placer dans le répertoire qui contient redis-server.exe et ses fichiers de conf
-- Entrer la commande suivante : ./redis-server "cheminRedis\redis.windows.conf"
+- Entrer la commande suivante : ./redis-server.exe "cheminRedis\redis.windows.conf"
 - Pour moi, la commande est la suivante : ./redis-server.exe "E:\redis\redis.windows.conf"
 
 **À ce moment, si notre projet Spring est lancé, on peut voir que le site est fonctionnel.**

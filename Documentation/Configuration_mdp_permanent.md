@@ -4,6 +4,7 @@ Ouvrir le fichier « redis.windows.conf » avec un éditeur de texte.
 
 Modifier la ligne « # requirepass foobared » dans la section « Security » (~ligne 443) en retirant le # et en remplaçant « foobared » par votre mot de passe.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 NOTE :
 
 Il est préférable de générer un mot de passe aléatoire encodé en base64, pour cela, on peut utiliser la commande suivante dans un bash linux (gitbash fonctionne) :
@@ -13,6 +14,8 @@ openssl rand 60 | openssl base64 -A
 Le résultat obtenu ressemble à celui-ci :
 
 /ho9BZUZMobjGX1FsnNzFJrNkJ2fuD3Af+GoSj0cSDQeapcAi7GVPa0106kSF1VhgL0FmoWG3qy8zk6u
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Ne pas oublier de remplacer ce mot de passe dans votre code.
 

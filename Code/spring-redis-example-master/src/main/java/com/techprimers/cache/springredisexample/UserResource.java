@@ -2,6 +2,8 @@ package com.techprimers.cache.springredisexample;
 
 
 import com.techprimers.cache.springredisexample.model.User;
+
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +32,13 @@ public class UserResource {
     public User update(@PathVariable("id") final String id,
                        @PathVariable("name") final String name) {
         userRepository.update(new User(id, name, 1000L));
+        return userRepository.findById(id);
+    }
+    
+    @GetMapping("/{id}")
+    @Cacheable("USER")
+    public User find(@PathVariable("id") final String id) 
+    {
         return userRepository.findById(id);
     }
 

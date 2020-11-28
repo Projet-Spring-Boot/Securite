@@ -73,6 +73,7 @@ Par exemple :
 @Override
    public User findById(String id) 
    {
+   	System.out.println("called findById() from DB");
        	return (User)hashOperations.get("USER", id);
    }
 ...

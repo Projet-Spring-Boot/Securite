@@ -60,3 +60,27 @@ public Map<String, User> find(@PathVariable String id)
    }
 ...
 ```
+
+On peut rajouter la ligne suivante pour afficher dans la console d'exécution du programme lorsque l'utilisateur va chercher une donnée dans la base de données: 
+
+```java
+System.out.println("called findById() from DB");
+```
+
+Par exemple :
+```java
+...
+@Override
+   public User findById(String id) 
+   {
+       	return (User)hashOperations.get("USER", id);
+   }
+...
+```
+
+Lorsque l'utilisateur saisie une première fois l'URL http://localhost:8082/rest/user/{id}, où {id} correspond à l'id de l'utilisateur de la base de données, la console affichera le message
+```sh
+called findById() from DB
+```
+
+S'il resaisie l'adresse, l'application ira chercher la donnée en cache et le message n'apparaitera pas dans la console.

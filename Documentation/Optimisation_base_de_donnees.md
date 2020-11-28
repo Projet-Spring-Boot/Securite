@@ -4,6 +4,16 @@
 
 Pour optimiser la base de données, on peut mettre en cache les données récupérées par les requêtes de l’application.
 
+Vérifier dans le pom.xml que la version de spring-boot-starter-parent est 2.3.4.RELEASE.
+
+```xml
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.4.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+```
 On a besoin d'ajouter les dépendances dans le fichier pom.xml
 
 ```xml
@@ -43,7 +53,7 @@ Par exemple la requête <strong>findById()</strong>
 ...
 @GetMapping("/{id}")
 @Cacheable("USER")
-public Map<String, User> find(@PathVariable String id) 
+public User find(@PathVariable String id) 
 {
     return userRepository.findById(id);
 }
